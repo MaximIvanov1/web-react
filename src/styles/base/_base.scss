@@ -13,18 +13,22 @@
   --surface: #{ui.$surface};
   --border: #{ui.$border};
 
+  /* Тіні/радіуси/контейнер */
   --shadow-1: #{ui.$shadow-1};
   --radius-1: #{map.get(ui.$radius, 1)};
   --radius-2: #{map.get(ui.$radius, 2)};
   --container: #{ui.$container};
 
+  /* Простір (генерація зі scale) */
   @each $k, $v in ui.$space { --space-#{$k}: #{$v}; }
 
+  /* Сумісність з попередньою лабою */
   --c-primary: var(--brand);
   --c-primary-600: var(--brand-600);
   --c-surface: var(--surface);
   --c-border: var(--border);
 
+  /* Типографіка (fluid scale) */
   --fs-body: #{map.get(ui.$fs, body)};
   --fs-h2:   #{map.get(ui.$fs, h2)};
   --fs-h1:   #{map.get(ui.$fs, h1)};

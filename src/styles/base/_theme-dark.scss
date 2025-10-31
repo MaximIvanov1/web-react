@@ -1,24 +1,18 @@
-@use '../_index' as ui;
-
-.sidenav{
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-  padding: var(--space-6) var(--space-4);
-  background: var(--surface);
-  border-right: 1px solid var(--border);
-}
-
-.sidebar{
-  @include ui.surface-card(var(--space-4));
-
-  &__title{
-    margin: 0 0 var(--space-3);
-    font-size: 1.1rem;
-    color: var(--brand);
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b1020;
+    --surface:#101528;
+    --fg:#e7eaf3;
+    --fg-muted:#b7bfd3;
+    --border:#232a3b;
+    --brand:#7fb3ff;
+    --brand-600:#6aa2f0;
+    --brand-100:#17233b;
+    --brand-meta: color-mix(in srgb, var(--surface) 92%, #fff 8%);
   }
 
-  &__list{ display: flex; flex-direction: column; gap: .5rem; }
-  &__item{ color: var(--fg); }
-  &__link{ color: var(--brand); }
+  .sidebar { background: var(--surface); }
+  .news-card__meta{
+    background: color-mix(in srgb, var(--surface) 92%, #fff 8%);
+  }
 }

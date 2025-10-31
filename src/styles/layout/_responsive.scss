@@ -1,6 +1,6 @@
 @use '../_index' as ui;
 
-/* ≥ 640px */
+
 @include ui.up(sm){
   .layout{
     grid-template-columns: 220px 1fr;
@@ -17,7 +17,7 @@
   }
 }
 
-/* ≥ 1024px */
+
 @include ui.up(lg){
   .layout{ grid-template-columns: 280px 1fr; }
 
